@@ -29,3 +29,18 @@ print(("Sua idade é:",idade,newline));
 
 print(("Marcos"))#
 END 
+/////////////////////////////////////////////////////////
+BEGIN # if else #
+
+INT idade;
+
+print(("Digite sua idade: ",newline));
+read((idade));
+
+  IF idade >= 18 THEN
+   print(("Entrada autorizada, tenha um bom proveito",newline))
+  ELSE
+    print(("Idade não autorizada somente com responsaveis",newline))
+  FI
+
+END
