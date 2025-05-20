@@ -44,3 +44,22 @@ read((idade));
   FI
 
 END
+/////////////////////////////////////////////////////////
+BEGIN # if else #
+
+INT idade;
+STRING nome;
+
+print(("Digite seu nome: ",newline));
+read((nome));
+
+print(("Digite sua idade: ",newline));
+read((idade));
+
+  IF idade >= 18 THEN
+   print((nome," Sua entrada é autorizada, tenha um bom proveito",newline))
+  ELSE
+    print((nome," Sua idade não é autorizada somente com responsaveis",newline))
+  FI
+
+END
