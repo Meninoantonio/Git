@@ -1,0 +1,31 @@
+BEGIN # Super calculador de idade #
+
+#INT idade_a;
+INT idade_b;
+INT sub;
+
+print(("Digite o ano de hoje: ",newline));
+read((idade_a));
+
+print(("Digite o do seu nascimento : ",newline));
+read((idade_b));
+
+sub := idade_a - idade_b;
+
+print((sub))#
+
+
+#STRING name;
+INT idade;
+
+print(("Digite um nome: ",newline));
+read(name);
+
+print(("Digite sua idade: ",newline));
+read(idade);
+
+print(("Seu nome é: ",name,newline));
+print(("Sua idade é:",idade,newline));
+
+print(("Marcos"))#
+END 
