@@ -63,3 +63,26 @@ read((idade));
   FI
 
 END
+
+
+////////////////////////////////////////////////////////////////////
+CONCERTADO COM CONTADOR O PROBLEMA DE APARECER INFINITAMENTE NA TELA
+/////////////////////////////////////////////////////////////////////
+BEGIN
+INT s;
+INT c := 1;
+
+print(("Digite a senha",newline));
+read((s));
+
+
+WHILE c > 0
+DO IF s ~= 1234 THEN
+	print(("Senha incorreta",newline));
+c -:= 1
+ELSE
+	print(("Senha correta",newline));
+c -:= 1
+FI
+OD
+END
