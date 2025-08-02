@@ -1,102 +1,46 @@
-BEGIN # Super calculador de idade #
-
-#INT idade_a;
-INT idade_b;
-INT sub;
-
-print(("Digite o ano de hoje: ",newline));
-read((idade_a));
-
-print(("Digite o do seu nascimento : ",newline));
-read((idade_b));
-
-sub := idade_a - idade_b;
-
-print((sub))#
+SELECT PS.NM_PESSOA , E.NM_EVENTO
+FROM INSCRICOES INS
+INNER JOIN EVENTOS E  ON INS.CD_EVENTO = E.CD_EVENTO
+INNER JOIN PESSOAS PS ON PS.CD_PESSOA = INS.CD_PESSOA 
 
 
-#STRING name;
-INT idade;
-
-print(("Digite um nome: ",newline));
-read(name);
-
-print(("Digite sua idade: ",newline));
-read(idade);
-
-print(("Seu nome é: ",name,newline));
-print(("Sua idade é:",idade,newline));
-
-print(("Marcos"))#
-END 
-/////////////////////////////////////////////////////////
-BEGIN # if else #
-
-INT idade;
-
-print(("Digite sua idade: ",newline));
-read((idade));
-
-  IF idade >= 18 THEN
-   print(("Entrada autorizada, tenha um bom proveito",newline))
-  ELSE
-    print(("Idade não autorizada somente com responsaveis",newline))
-  FI
-
-END
-/////////////////////////////////////////////////////////
-BEGIN # if else #
-
-INT idade;
-STRING nome;
-
-print(("Digite seu nome: ",newline));
-read((nome));
-
-print(("Digite sua idade: ",newline));
-read((idade));
-
-  IF idade >= 18 THEN
-   print((nome," Sua entrada é autorizada, tenha um bom proveito",newline))
-  ELSE
-    print((nome," Sua idade não é autorizada somente com responsaveis",newline))
-  FI
-
-END
+select E.NM_EVENTO, TP.NM_TIPO_EVENTO from EVENTOS E
+INNER JOIN TIPOS_EVENTOS TP ON E.CD_TIPO_EVENTO = TP.CD_TIPO_EVENTO
 
 
-////////////////////////////////////////////////////////////////////
-CONCERTADO O PROBLEMA DE APARECER INFINITAMENTE NA TELA COM CONTADOR 
-/////////////////////////////////////////////////////////////////////
-BEGIN
-INT s;
-INT c := 1;
-
-print(("Digite a senha",newline));
-read((s));
+SELECT PL.NM_PALESTRANTE, INS.NM_INSTITUICAO
+FROM PALESTRANTES PL
+INNER JOIN INSTITUICOES INS ON PL.CD_INSTITUICAO = INS.CD_INSTITUICAO;
 
 
-WHILE c > 0
-DO IF s ~= 1234 THEN
-	print(("Senha incorreta",newline));
-c -:= 1
-ELSE
-	print(("Senha correta",newline));
-c -:= 1
-FI
-OD
-END
-////////////////////////////////////////////////////////////////////////
-BEGIN
-INT s ;
+SELECT P.NM_PESSOA, C.NM_CIDADE FROM PESSOAS P 
+INNER JOIN CIDADES C ON P.CD_CIDADE = C.CD_CIDADE
 
-print(("Digite numero: ",newline));
-read((s));
 
-WHILE s >= 0
-DO
-print((s));
-s -:=1
-OD
 
-END
+SELECT E.NM_EVENTO, PL.NM_PALESTRANTE  FROM PALESTRANTES_EVENTOS PE  
+inner JOIN EVENTOS E ON E.CD_EVENTO = PE.CD_EVENTO
+inner join PALESTRANTES PL ON PL.CD_PALESTRANTE = PE.CD_PALESTRANTE
+
+
+select P.NM_PESSOA, E.NM_EVENTO, INC.DS_STATUS FROM INSCRICOES INC 
+INNER JOIN PESSOAS P ON P.CD_PESSOA = INC.CD_PESSOA
+INNER JOIN EVENTOS E ON E.CD_EVENTO = INC.CD_EVENTO
+
+
+select E.NM_EVENTO, C.NM_CIDADE FROM EVENTOS E 
+inner JOIN CIDADES C ON C.CD_CIDADE = E.CD_CIDADE
+
+
+select PL.NM_PALESTRANTE, SK.NM_ESPECIALIDADE FROM ESPECIALIDADES_PALESTRANTES EP
+INNER JOIN ESPECIALIDADES SK ON SK.CD_ESPECIALIDADE = EP.CD_ESPECIALIDADE
+INNER JOIN PALESTRANTES PL ON PL.CD_PALESTRANTE = EP.CD_PALESTRANTE
+
+
+select E.NM_EVENTO, INC.VL_PAGO FROM EVENTOS E
+inner JOIN  INSCRICOES INC ON INC.CD_EVENTO = E.CD_EVENTO
+
+
+
+select E.NM_EVENTO, E.HR_EVENTO, TP.NM_TIPO_EVENTO FROM EVENTOS E 
+INNER JOIN TIPOS_EVENTOS TP ON  TP.CD_TIPO_EVENTO = E.CD_TIPO_EVENTO
