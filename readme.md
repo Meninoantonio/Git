@@ -1,2 +1,3 @@
-testa o git pela primeira vez
-ignore isso po enquanto..
+Quais são os tipos de pesquisa mais comuns em ambientes inovadores NA ÁREA DE SI (SISTEMAS DE INFORMAÇÃO) ?
+Dê exemplos concretos de como esses tipos de pesquisa foram aplicados em projetos de inovação recentes NA  ÁREA SI (SISTEMAS DE INFORMAÇÃO) .
+Uma resposta completa deve identificar e explicar tipos de pesquisa como pesquisa básica, pesquisa aplicada, pesquisa de desenvolvimento experimental, entre outras. Deve discutir como a pesquisa básica gera novos conhecimentos fundamentais, como a pesquisa aplicada utiliza esses conhecimentos para resolver problemas específicos, e como a pesquisa de desenvolvimento experimental transforma esses conhecimentos e soluções em produtos ou processos viáveis. Exemplos concretos podem incluir a pesquisa básica em biotecnologia que levou ao desenvolvimento de novas terapias genéticas, ou a pesquisa aplicada em inteligência artificial que resultou em algoritmos de aprendizado de máquina usados em reconhecimento facial.
