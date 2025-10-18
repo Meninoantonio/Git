@@ -3,7 +3,7 @@ create TABLE clientes (
     NM_CLIENTES varchar(100),
     CD_CIDADE integer,
     USUARIO varchar(100),
-    foreign key (CD_CIDADE) references Cidades(CD_CIDADE)) ;
+    foreign key (CD_CIDADE) references Cidades(CD_CIDADE) ON DELETE CASCADE ) ;
 
 create table Cidades(
     CD_CIDADE integer primary key,
@@ -16,7 +16,7 @@ create table Dependentes(
     NM_DEPENDENTE varchar(100),
     CD_CLIENTES INTEGER,
     USUARIO varchar (100),
-    foreign KEY (CD_CLIENTES) references CLIENTES(CD_CLIENTES));
+    foreign KEY (CD_CLIENTES) references CLIENTES(CD_CLIENTES ON DELETE CASCADE));
 
 CREATE TABLE LOGS (
     CD_LOG integer primary KEY,
